@@ -1,8 +1,8 @@
 import React from 'react'
 import {useEffect,useState } from 'react';
 import Axios from 'axios';
-import { useCart } from '../Context/Cart.context';
-export default function Data() {
+import { useCart } from '../Context/Author.context';
+export default function Dataauthor() {
 
    const {Cart,setCart} = useCart();
 
@@ -10,7 +10,7 @@ export default function Data() {
 
     useEffect(()=>{
 
-    Axios.get("https://books-mock-api-sri8.onrender.com/books").then(result=>{
+    Axios.get("https://authors-api.onrender.com/authors").then(result=>{
       if(result&&result.data){
         setCart(result.data);
         // console.log(result.data)

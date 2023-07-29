@@ -17,12 +17,12 @@ export default function Update() {
 
   // console.log(matchedUser);
 
-  let{name,email,phone,website} = matchedUser[0];
+  let{title,author,ISBN_No,publishedDate} = matchedUser[0];
 
-  let  [mname,setName] = useState(name);
-  let  [memail,setEmail] = useState(email);
-  let  [mphone,setPhone] = useState(phone);
-  let  [mwebsite,setWebsite] = useState(website);
+  let  [mtitle,settitle] = useState(title);
+  let  [mauthor,setauthor] = useState(author);
+  let  [mISBN_No,setISBN_No] = useState(ISBN_No);
+  let  [mpublishedDate,setpublishedDate] = useState(publishedDate);
 
   //HANDLING EDIT BUTTON FUNCTIONALITY
 
@@ -30,10 +30,10 @@ export default function Update() {
 
     event.preventDefault();
 
-    handleUpdate(id,mname,memail,mphone,mwebsite);
+    handleUpdate(id,mtitle,mauthor,mISBN_No,mpublishedDate);
 
 
-    navigate('/')
+    navigate('/books')
 
   }
   return (
@@ -52,27 +52,27 @@ export default function Update() {
         </div>
         {/* Name */}
         <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text"name='name' className='form-control' onChange={(e)=>setName(e.target.value)} value={mname}/>
+          <label htmlFor="name">Title:</label>
+          <input type="text"name='name' className='form-control' onChange={(e)=>settitle(e.target.value)} value={mtitle}/>
         </div>
         {/* Email */}
            <div>
-          <label htmlFor="email">Email:</label>
-          <input type="email"name='email' className='form-control'value={memail} onChange={(e) => setEmail(e.target.value)}/>
+          <label htmlFor="author">Author:</label>
+          <input type="text"name='author' className='form-control'value={mauthor} onChange={(e) => setauthor(e.target.value)}/>
         </div>
          {/* Phone */}
            <div>
-          <label htmlFor="phone">Phone:</label>
-          <input type="text"name='phone' className='form-control' value={mphone} onChange={(e) => setPhone(e.target.value)}/>
+          <label htmlFor="ISBN_No">ISBN_No:</label>
+          <input type="text"name='ISBN_No' className='form-control' value={mISBN_No} onChange={(e) => setISBN_No(e.target.value)}/>
         </div>
          {/* Website */}
            <div>
-          <label htmlFor="website">Website:</label>
-          <input type="text"name='website' className='form-control'value={mwebsite}  onChange={(e) => setWebsite(e.target.value)}/>
+          <label htmlFor="publishedDate">Published Date:</label>
+          <input type="date"name='publishedDate' className='form-control'value={mpublishedDate}  onChange={(e) => setpublishedDate(e.target.value)}/>
         </div><br />
 
         {/* BACK & SAVE BUTTON */}
-          <Link to={'/'} className='btn btn-danger m-1'>Back</Link>
+          <Link to={'/books'} className='btn btn-danger m-1'>Back</Link>
         <button className='btn btn-primary m-1' type='submit'>Save</button>
       </form>
     </div>

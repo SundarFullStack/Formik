@@ -1,7 +1,7 @@
 import {createContext,useContext,useState} from 'react';
 
 
-const cartContext = createContext({
+const authorContext = createContext({
 
   Cart:[],
   setCart:()=>Promise,
@@ -10,19 +10,19 @@ const cartContext = createContext({
   handleDelete:()=>null,
 })
 
-export const useCart = () => useContext(cartContext);
+export const useCart = () => useContext(authorContext);
 
-export default function CartContextProvider({children}){
+export default function AuthorContextProvider({children}){
 
   let [Cart,setCart] = useState([]);
  
 
   //HANDLING USER CREATION FUNCTIONALITY
 
-  function handleCreate(id,title,publishedDate,ISBN_No,author){
+  function handleCreate(id,authorName,birthDate,bioGraphy){
     let cart_copy = [...Cart];
 
-cart_copy.push({id:id,title:title,publishedDate:publishedDate,ISBN_No:ISBN_No,author:author})
+cart_copy.push({id:id,authorName:authorName,birthDate:birthDate,bioGraphy:bioGraphy})
 
 // console.log('cart_copy',cart_copy);
 
@@ -34,7 +34,7 @@ setCart(cart_copy);
 
   // HANDLING UPDATE USER FUNCTIONALITY
 
-  function handleUpdate(id,title,publishedDate,ISBN_No,author){
+  function handleUpdate(id,authorName,birthDate,bioGraphy){
 
     let cart_copyU = [...Cart];
 
@@ -44,10 +44,9 @@ setCart(cart_copy);
 
    if(updateUser){
 
-    updateUser.title=title;
-    updateUser.publishedDate=publishedDate;
-    updateUser.ISBN_No=ISBN_No;
-    updateUser.author=author;
+    updateUser.authorName=authorName;
+    updateUser.birthDate=birthDate;
+    updateUser.bioGraphy=bioGraphy;
    }
 
 
@@ -88,5 +87,5 @@ let value ={
 }
 
 
-return <cartContext.Provider value={value}>{children}</cartContext.Provider>
+return <authorContext.Provider value={value}>{children}</authorContext.Provider>
 }
