@@ -34,7 +34,7 @@ setCart(cart_copy);
 
   // HANDLING UPDATE USER FUNCTIONALITY
 
-  function handleUpdate(id,title,publishedDate,ISBN_No,author){
+  function handleUpdate(id,title,author,ISBN_No,publishedDate,){
 
     let cart_copyU = [...Cart];
 
