@@ -48,8 +48,8 @@ export default function Authorlist() {
             <tr  key={index}>
             <td>{user.id}</td>
             <td>{user.authorName}</td>
-            <td>{user.birthDate}</td>
             <td>{user.bioGraphy}</td>
+            <td>{user.birthDate}</td>
             <td>
               <Link to={`/editauthor/${user.id}`} className='btn btn-primary btn-sm m-1'>Edit</Link>
               <button className='btn btn-danger btn-sm m-1' onClick={(e)=>deletefunc(user.id)}>Delete</button>
