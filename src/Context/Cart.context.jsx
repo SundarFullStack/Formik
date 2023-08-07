@@ -44,7 +44,7 @@ setCart(cart_copy);
 
    if(updateUser){
 
-    updateUser.title=title;  
+   
     updateUser.author=author;
       updateUser.ISBN_No=ISBN_No;
       updateUser.publishedDate=publishedDate;
