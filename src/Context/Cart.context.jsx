@@ -22,7 +22,7 @@ export default function CartContextProvider({children}){
   function handleCreate(id,title,publishedDate,ISBN_No,author){
     let cart_copy = [...Cart];
 
-cart_copy.push({id:id,author:author,ISBN_No:ISBN_No,publishedDate:publishedDate})
+cart_copy.push({id:id,title:title,author:author,ISBN_No:ISBN_No,publishedDate:publishedDate})
 
 // console.log('cart_copy',cart_copy);
 
@@ -44,7 +44,7 @@ setCart(cart_copy);
 
    if(updateUser){
 
-   
+   updateUser.title=title;
     updateUser.author=author;
       updateUser.ISBN_No=ISBN_No;
       updateUser.publishedDate=publishedDate;
