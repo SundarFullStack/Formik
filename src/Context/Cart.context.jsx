@@ -19,7 +19,7 @@ export default function CartContextProvider({children}){
 
   //HANDLING USER CREATION FUNCTIONALITY
 
-  function handleCreate(id,title,publishedDate,ISBN_No,author){
+  function handleCreate(id,title,author,ISBN_No,publishedDate){
     let cart_copy = [...Cart];
 
 cart_copy.push({id:id,title:title,author:author,ISBN_No:ISBN_No,publishedDate:publishedDate})
@@ -34,7 +34,7 @@ setCart(cart_copy);
 
   // HANDLING UPDATE USER FUNCTIONALITY
 
-  function handleUpdate(id,title,author,ISBN_No,publishedDate,){
+  function handleUpdate(id,title,author,ISBN_No,publishedDate){
 
     let cart_copyU = [...Cart];
 
