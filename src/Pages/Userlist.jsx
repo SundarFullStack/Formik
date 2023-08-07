@@ -39,7 +39,7 @@ export default function Userlist() {
         <thead>
           <tr>
             <th>Id</th>
-            <th>Title</th>
+            <th>Author Name</th>
             <th>ISBN_No</th>
             <th>publishedDate</th>
           </tr>
@@ -49,7 +49,7 @@ export default function Userlist() {
         {Cart.map((user,index)=>(
             <tr  key={index}>
             <td>{user.id}</td>
-            <td>{user.title}</td>
+      
             <td>{user.author}</td>
             <td>{user.ISBN_No}</td>
             <td>{user.publishedDate}</td>
