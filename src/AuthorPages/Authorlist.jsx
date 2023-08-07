@@ -38,8 +38,8 @@ export default function Authorlist() {
           <tr>
             <th>Id</th>
             <th>Author Name</th>
-            <th>Birth Date</th>
             <th>Bio-Graphy</th>
+            <th>Birth Date</th>
           </tr>
 
         </thead>
