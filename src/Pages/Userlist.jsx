@@ -39,11 +39,9 @@ export default function Userlist() {
         <thead>
           <tr>
             <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Website</th>
-            <th>Action</th>
+            <th>Title</th>
+            <th>ISBN_No</th>
+            <th>publishedDate</th>
           </tr>
 
         </thead>
