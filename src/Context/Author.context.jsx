@@ -34,7 +34,7 @@ setCart(cart_copy);
 
   // HANDLING UPDATE USER FUNCTIONALITY
 
-  function handleUpdate(id,authorName,birthDate,bioGraphy){
+  function handleUpdate(id,authorName,bioGraphy,birthDate){
 
     let cart_copyU = [...Cart];
 
@@ -45,8 +45,9 @@ setCart(cart_copy);
    if(updateUser){
 
     updateUser.authorName=authorName;
+      updateUser.bioGraphy=bioGraphy;
     updateUser.birthDate=birthDate;
-    updateUser.bioGraphy=bioGraphy;
+   
    }
 
 
